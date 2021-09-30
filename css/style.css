@@ -16,3 +16,13 @@ body, html {
     border-radius: 5px;
     padding: 0px 15px;
 }
+
+.flex-visitenkarte table tr td a {
+    text-decoration: none;
+    color: black;
+}
+
+.flex-visitenkarte table tr td {
+    text-decoration: none;
+    color: black;
+}
