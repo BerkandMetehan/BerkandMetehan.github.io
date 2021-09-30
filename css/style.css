@@ -1,4 +1,18 @@
 body, html {
     margin: 0;
     height: 100%;
+    font-family: Quicksand;
+}
+
+.flex-container-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.flex-visitenkarte {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0px 15px;
 }
