@@ -11,19 +11,30 @@ body, html {
     height: 100%;
 }
 
-.flex-visitenkarte {
+.flex-container-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    background-color: lightgrey;
     border: 2px solid black;
-    border-radius: 5px;
-    padding: 0px 15px;
-    font-family: Quicksand;
+    border-radius: 20px;
+    padding: 0 1rem;
+
 }
 
-.flex-visitenkarte table tr td a {
+.flex-item-1 {
+    justify-content: center;
+    padding: 0 1rem 0 0;
+}
+
+.flex-container-2 table tr td a {
     text-decoration: none;
     color: black;
 }
 
-.flex-visitenkarte table tr td {
+.flex-container-2 table tr td {
     text-decoration: none;
     color: black;
 }
