@@ -1,12 +1,150 @@
- <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Chorleitungsstücke</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FD Informatik</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: rgba(255,255,255,0.95);
+      width: 100%;
+      max-width: 700px;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: 2rem;
+      color: #222;
+    }
+
+    p.subtitle {
+      margin-bottom: 30px;
+      color: #666;
+    }
+
+    .pdf-list {
+      display: grid;
+      gap: 20px;
+    }
+
+    .pdf-card {
+      padding: 20px;
+      border-radius: 14px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .pdf-card h2 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .pdf-card button {
+      background: #111827;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .pdf-card button:hover {
+      background: #374151;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 25px;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <h1>Lernpakete</h1>
+    <p class="subtitle">Nach dem Test bekommt ihr das Passwort für das nächste Lernpaket <3</p>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+    <div class="pdf-list">
+      <div class="pdf-card">
+        <h2>Lernpaket 1</h2>
+        <button onclick="window.open('Lernpaket 1.pdf', '_blank')">Open PDF</button>
+      </div>
 
+      <div class="pdf-card">
+        <h2>Test 1</h2>
+        <button onclick="window.open('Test 1.pdf', '_blank')">Open PDF</button>
+      </div>
+
+      <div class="pdf-card">
+        <h2>Lernpaket 2</h2>
+        <button onclick="openProtectedPDF('Angreifer', 'Lernpaket 2.pdf')">Enter Password</button>
+      </div>
+
+      <div class="pdf-card">
+        <h2>Test 2</h2>
+        <button onclick="window.open('Test 2.pdf', '_blank')">Open PDF</button>
+      </div>
+
+      <div class="pdf-card">
+        <h2>Lernpaket 3</h2>
+        <button onclick="openProtectedPDF('WannCry', 'Lernpaket 3.pdf')">Enter Password</button>
+      </div>
+
+      <div class="pdf-card">
+        <h2>Test 3</h2>
+        <button onclick="window.open('Test 3.pdf', '_blank')">Open PDF</button>
+      </div>
+
+      <div class="pdf-card">
+        <h2>Lernpaket 4</h2>
+        <button onclick="openProtectedPDF('Equifax', 'Lernpaket 4.pdf')">Enter Password</button>
+      </div>
+
+      <div class="pdf-card">
+        <h2>Test 4</h2>
+        <button onclick="window.open('Test 4.pdf', '_blank')">Open PDF</button>
+      </div>
+      
+    </div>
+  </div>
+
+  <script>
+    function openProtectedPDF(correctPassword, pdfLink) {
+      const userPassword = prompt('Please enter the password:');
+
+      if (userPassword === correctPassword) {
+        window.open(pdfLink, '_blank');
+      } else if (userPassword !== null) {
+        alert('Incorrect password.');
+      }
+    }
+  </script>
 </body>
-</html> 
+</html>
